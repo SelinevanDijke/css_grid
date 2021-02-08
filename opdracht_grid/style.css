@@ -1,0 +1,67 @@
+body {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 150px 800px 500px 150px;
+    grid-gap: 5px;
+}
+
+.site-header {
+    background-color: #3D3B8E;
+}
+
+.site-main{
+ background-color: #E072A4;
+}
+
+.widget-area {
+    background-color: #B0E298;
+}
+
+.site-footer{
+    background-color: #6883BA;
+}
+
+/* Groter scherm */
+
+@media (min-width: 1024px) {
+
+    .container {
+        grid-template-rows: 450px 250px auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    .site-header {
+        grid-row: 1 / 4;
+    }
+}
+
+/* Nog een groter scherm */
+
+@media (min-width: 1600px) {
+
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .site-header {
+        grid-row: 1 / 5;
+    }
+
+    .site-main {
+        grid-row: 1 / 4;
+    }
+
+    .widget-area {
+        grid-row: 1 / 5;
+    }
+
+    .site-footer {
+        grid-column: 2 / 3;
+    }
+
+}
